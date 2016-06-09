@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/weather-icons-wind.css">
+    <link rel="stylesheet" type="text/css" href="css/weather-icons-wind.min.css">
+    <link rel="stylesheet" type="text/css" href="css/weather-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/weather-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main_section">
+            <input id="search" placeholder="Press enter to search..." type="text">
+
+            <ul></ul>
+        </div>
+        <div id="weather">
+            <div id="weatherInfo">
+                <h2>Weather information</h2>
+                <div class="list" id="temperature"></div>
+                <div class="list" id="cloudCover"></div>
+                <div class="list" id="windSpeed"></div>
+                <div class="list" id="humidity"></div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div id="map" style=""></div>
+
+
+
+
+    <script>
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {lat: 59.34635290000001, lng: 18.0224535},
+                zoom: 14
+            });
+        }
+    </script>
+    <script type="text/javascript" src="java.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK77gFQjayNkeUhTA2YNJdw--r7iGGNQE&callback=initMap"></script>
+</body>
+</html>
